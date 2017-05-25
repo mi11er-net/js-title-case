@@ -1,0 +1,15 @@
+sudo: false
+language: node_js
+cache:
+  yarn: true
+  directories:
+  - node_modules
+notifications:
+  email:
+    on_failure: always
+node_js:
+- "node"
+- "7"
+- "6"
+before_install:
+- yarn config set progress=false
