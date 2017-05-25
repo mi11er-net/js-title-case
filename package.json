@@ -13,8 +13,8 @@
   "bugs": {
     "url": "https://github.com/MatthewMi11er/js-title-case/issues"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.module.js",
+  "main": "dist/title-case.js",
+  "module": "dist/title-case.module.js",
   "files": [
     "dist/",
     "LICENSE",
