@@ -6,17 +6,17 @@
 /**
  * These are words that generally should not be capitalized in the title.
  */
-const smallWords = /^(a|an|and|as|at|but|by|en|for|if|in|nor|of|on|or|per|the|to|vs?\.?|via)$/i;
+var smallWords = /^(a|an|and|as|at|but|by|en|for|if|in|nor|of|on|or|per|the|to|vs?\.?|via)$/i;
 
 /**
  * This regular exprision matches things that look like HTML tags
  */
-const stripHtmlRegex = /<(?:code|var)[^>]*>.*?<\/\1>|<[^>]+>|&\S+;/g;
+var stripHtmlRegex = /<(?:code|var)[^>]*>.*?<\/\1>|<[^>]+>|&\S+;/g;
 
 /**
  * This regular expression matches each word where we might want to change cases.
  */
-const titleCaseRegex = /[A-Za-z0-9\u00C0-\u00FF]+[^\s-]*/g;
+var titleCaseRegex = /[A-Za-z0-9\u00C0-\u00FF]+[^\s-]*/g;
 
 /**
  * Take a value and make sure it really is a string.
@@ -35,21 +35,21 @@ function toString(value) {
 }
 
 function titleCase(value) {
-  let string = toString(value);
+  var string = toString(value);
 
   /**
    * Remove HTML like tags and entities
    */
-  const htmlReplacments = [];
-  string = string.replace(stripHtmlRegex, (match, index) => {
-    htmlReplacments.push({ match, index });
+  var htmlReplacments = [];
+  string = string.replace(stripHtmlRegex, function (match, index) {
+    htmlReplacments.push({ match: match, index: index });
     return '';
   });
 
   /**
    * Capitalize as necessary
    */
-  string = string.replace(titleCaseRegex, (match, index, title) => {
+  string = string.replace(titleCaseRegex, function (match, index, title) {
     /**
      * Determine Lower Case Words
      */
@@ -77,7 +77,7 @@ function titleCase(value) {
   /**
    * Try to put the HTML tags and entities back where they belong
    */
-  htmlReplacments.forEach((replacement) => {
+  htmlReplacments.forEach(function (replacement) {
     string = [string.slice(0, replacement.index), replacement.match, string.slice(replacement.index)].join('');
   });
   return string;
