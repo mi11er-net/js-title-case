@@ -3,9 +3,9 @@
 Object.defineProperty(exports, '__esModule', {
   value: true,
 });
-/*
-  * To Title Case 2.1 – http://individed.com/code/to-title-case/
-  * Copyright © 2008–2013 David Gouch. Licensed under the MIT License.
+/**
+ * Based on https://github.com/gouch/to-title-case by David Gouch
+ * See also: http://camendesign.com/code/title-case
  */
 
 /**

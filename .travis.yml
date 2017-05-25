@@ -13,3 +13,5 @@ node_js:
 - "6"
 before_install:
 - yarn config set progress=false
+before_script: greenkeeper-lockfile-update
+after_script: greenkeeper-lockfile-upload
