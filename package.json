@@ -1,7 +1,7 @@
 {
   "name": "js-title-case",
   "description": "Convert a string to title case, while handling edge cases",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "https://github.com/MatthewMi11er/js-title-case",
   "author": "Matthew Miller <matthew@mi11er.net>",
   "license": "MIT",
