@@ -9,8 +9,8 @@ Object.defineProperty(exports, "__esModule", {
  */
 
 /**
- * These are words that generally should not be capitalized in the title.
- */
+  * These are words that generally should not be capitalized in the title.
+  */
 var smallWords = /^(a|an|and|as|at|but|by|en|for|if|in|nor|of|on|or|per|the|to|vs?\.?|via)$/i;
 
 /**
