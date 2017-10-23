@@ -3,7 +3,7 @@
  * See also: http://camendesign.com/code/title-case
  */
 
- /**
+/**
   * These are words that generally should not be capitalized in the title.
   */
 const smallWords = /^(a|an|and|as|at|but|by|en|for|if|in|nor|of|on|or|per|the|to|vs?\.?|via)$/i;
