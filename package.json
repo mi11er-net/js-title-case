@@ -1,7 +1,7 @@
 {
   "name": "js-title-case",
   "description": "Convert a string to title case, while handling edge cases",
-  "version": "1.0.4",
+  "version": "0.0.0-development",
   "homepage": "https://github.com/MatthewMi11er/js-title-case",
   "author": "Matthew Miller <matthew@mi11er.net>",
   "license": "MIT",
@@ -32,7 +32,8 @@
     "build": "run-s clean test build:*",
     "build:main": "BABEL_ENV=main babel -d dist/ src/",
     "build:module": "BABEL_ENV=module babel -d dist/module/ src/",
-    "clean": "rimraf .nyc_output coverage npm-debug.log dist/*"
+    "clean": "rimraf .nyc_output coverage npm-debug.log dist/*",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {},
   "devDependencies": {
@@ -51,7 +52,8 @@
     "mocha-cases": "0.2.0",
     "npm-run-all": "4.1.2",
     "nyc": "11.4.1",
-    "rimraf": "2.6.2"
+    "rimraf": "2.6.2",
+    "semantic-release": "12.2.2"
   },
   "nyc": {
     "include": [
