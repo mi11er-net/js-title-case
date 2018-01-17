@@ -4,7 +4,7 @@ module.exports = {
     "import"
   ],
   "rules": {
-   "complexity": [2, 6]
+   "complexity": [2, 9]
   },
   "env": {
     "node": true,
