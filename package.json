@@ -37,6 +37,8 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@semantic-release/changelog": "^1.0.0",
+    "@semantic-release/git": "^2.0.2",
     "babel-cli": "6.26.0",
     "babel-plugin-syntax-dynamic-import": "6.18.0",
     "babel-preset-env": "1.6.1",
@@ -104,5 +106,11 @@
         ]
       }
     }
+  },
+  "release": {
+    "branch": "master",
+    "publish": [
+      "@semantic-release/changelog"
+    ]
   }
 }
