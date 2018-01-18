@@ -24,6 +24,16 @@
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/@semantic-release/error/-/error-2.1.0.tgz#44771f676f5b148da309111285a97901aa95a6e0"
 
+"@semantic-release/exec@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@semantic-release/exec/-/exec-1.0.2.tgz#655405003d7e694b66ffcb7658dfa59ce9b141bc"
+  dependencies:
+    "@semantic-release/error" "^2.1.0"
+    debug "^3.1.0"
+    execa "^0.9.0"
+    lodash "^4.17.4"
+    parse-json "^4.0.0"
+
 "@semantic-release/git@^2.0.2":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@semantic-release/git/-/git-2.0.2.tgz#00f82f338999820cf54beb8e9e3acdd5b160f571"
@@ -2223,14 +2233,6 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.4, graceful-fs@^4.1.6,
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
 
-greenkeeper-lockfile@1.12.0:
-  version "1.12.0"
-  resolved "https://registry.yarnpkg.com/greenkeeper-lockfile/-/greenkeeper-lockfile-1.12.0.tgz#e2cbb6529ecb2af3dabcf30f027549dceb5fbd6e"
-  dependencies:
-    lodash "^4.17.4"
-    require-relative "^0.8.7"
-    semver "^5.3.0"
-
 growl@1.10.3:
   version "1.10.3"
   resolved "https://registry.yarnpkg.com/growl/-/growl-1.10.3.tgz#1926ba90cf3edfe2adb4927f5880bc22c66c790f"
@@ -4001,10 +4003,6 @@ require-from-string@^2.0.1:
 require-main-filename@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/require-main-filename/-/require-main-filename-1.0.1.tgz#97f717b69d48784f5f526a6c5aa8ffdda055a4d1"
-
-require-relative@^0.8.7:
-  version "0.8.7"
-  resolved "https://registry.yarnpkg.com/require-relative/-/require-relative-0.8.7.tgz#7999539fc9e047a37928fa196f8e1563dabd36de"
 
 require-uncached@^1.0.3:
   version "1.0.3"
