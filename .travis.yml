@@ -16,7 +16,7 @@ before_script: greenkeeper-lockfile-update
 script: npm run build
 after_script: greenkeeper-lockfile-upload
 before_deploy:
-  - gpg/import.sh > /dev/null 2>&1
+  - .travis/setup-git.sh > /dev/null 2>&1
 deploy:
   provider: script
   script: npm run semantic-release
