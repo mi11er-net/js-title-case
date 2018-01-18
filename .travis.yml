@@ -8,7 +8,7 @@ notifications:
   email:
     on_failure: always
 node_js:
-- "node"
+  - "node"
 before_install:
 - yarn config set progress=false
 - yarn global add greenkeeper-lockfile@1
@@ -23,4 +23,3 @@ deploy:
   skip_cleanup: true
   on:
     branch: master
--
