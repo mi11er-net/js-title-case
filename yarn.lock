@@ -3182,9 +3182,9 @@ mkdirp@0.5.1, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1:
   dependencies:
     minimist "0.0.8"
 
-mocha-cases@0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/mocha-cases/-/mocha-cases-0.2.0.tgz#db1b9cae0e03845ab3d51f91f3be5a76632b9a8e"
+mocha-cases@0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/mocha-cases/-/mocha-cases-0.2.1.tgz#fc499fb7c413a86b2234df8f0709dd701398d929"
   dependencies:
     async-done "^1.2.3"
     chai "^4.1.2"
