@@ -33,21 +33,18 @@
     execa "^0.9.0"
     lodash "^4.17.4"
 
-"@semantic-release/git@^2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@semantic-release/git/-/git-2.0.2.tgz#00f82f338999820cf54beb8e9e3acdd5b160f571"
+"@semantic-release/git@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@semantic-release/git/-/git-3.0.0.tgz#8e2fb02672e83c878376717d3185e1365d204599"
   dependencies:
     "@semantic-release/error" "^2.1.0"
     debug "^3.1.0"
     dir-glob "^2.0.0"
     execa "^0.9.0"
     fs-extra "^5.0.0"
-    git-url-parse "^7.0.1"
     lodash "^4.17.4"
     micromatch "^3.1.4"
-    p-locate "^2.0.0"
     p-reduce "^1.0.0"
-    semver "^5.4.1"
 
 "@semantic-release/github@^3.0.1":
   version "3.0.2"
