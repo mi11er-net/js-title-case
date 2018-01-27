@@ -37,8 +37,8 @@
   "dependencies": {},
   "devDependencies": {
     "@semantic-release/changelog": "^1.0.0",
-    "@semantic-release/exec": "^1.0.2",
-    "@semantic-release/git": "^2.0.2",
+    "@semantic-release/exec": "^2.0.0",
+    "@semantic-release/git": "^3.0.0",
     "babel-cli": "6.26.0",
     "babel-plugin-syntax-dynamic-import": "6.18.0",
     "babel-preset-env": "1.6.1",
@@ -54,7 +54,7 @@
     "npm-run-all": "4.1.2",
     "nyc": "11.4.1",
     "rimraf": "2.6.2",
-    "semantic-release": "12.2.5"
+    "semantic-release": "13.0.1"
   },
   "nyc": {
     "include": [
