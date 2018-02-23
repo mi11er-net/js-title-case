@@ -16,12 +16,14 @@ const stripHtmlRegex = /<(?:code|var)[^>]*>.*?<\/\1>|<[^>]+>|&\S+;/g;
 /**
  * This regular expression matches each word where we might want to change cases.
  */
-const titleCaseRegex = /[A-Za-z0-9\u00C0-\u00FF]+[^\s-]*/g;
-
+const titleCaseRegex = /[\dA-Za-z\u00C0-\u00FF]+[^\s-]*/g;
 
 /**
  * Take a value and make sure it really is a string.
  * null and undefined are converted to an empty string.
+ *
+ * @param {mixed} value A value to turn into a string
+ * @return {string} The value as a string
  */
 function toString(value) {
   if (value === null || value === undefined) {
@@ -47,6 +49,7 @@ function titleCase(value) {
     return '';
   });
 
+  /* eslint-disable complexity */
   /**
    * Capitalize as necessary
    */
@@ -59,11 +62,10 @@ function titleCase(value) {
       index + match.length !== title.length && // A single word title is not lower case.
       match.search(smallWords) > -1 && // Small words are lower case.
       title.charAt(index - 2) !== ':' && // Words after a colon are not lower case.
-      (
-        title.charAt(index + match.length) !== '-' ||
-        title.charAt(index - 1) === '-'
-      ) &&
-      title.charAt(index - 1).search(/[^\s-]/) < 0) {
+      (title.charAt(index + match.length) !== '-' ||
+        title.charAt(index - 1) === '-') &&
+      title.charAt(index - 1).search(/[^\s-]/) < 0
+    ) {
       return match.toLowerCase();
     }
 
@@ -79,12 +81,17 @@ function titleCase(value) {
      */
     return match.charAt(0).toUpperCase() + match.substr(1);
   });
+  /* eslint-enable complexity */
 
   /**
    * Try to put the HTML tags and entities back where they belong
    */
-  htmlReplacments.forEach((replacement) => {
-    string = [string.slice(0, replacement.index), replacement.match, string.slice(replacement.index)].join('');
+  htmlReplacments.forEach(replacement => {
+    string = [
+      string.slice(0, replacement.index),
+      replacement.match,
+      string.slice(replacement.index),
+    ].join('');
   });
   return string;
 }
