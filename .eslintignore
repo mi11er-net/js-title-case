@@ -1,0 +1,11 @@
+# Build Directory
+/dist/
+
+# Test output
+/.nyc_output/
+/coverage/
+
+# Let's lint these
+!/.prettierrc.js
+!/.eslintrc.js
+

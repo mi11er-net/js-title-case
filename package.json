@@ -9,12 +9,7 @@
   },
   "license": "MIT",
   "author": "Matthew Miller <matthew@mi11er.net>",
-  "files": [
-    "dist/*",
-    "LICENSE",
-    "package.json",
-    "README.md"
-  ],
+  "files": ["dist/*", "LICENSE", "package.json", "README.md"],
   "main": "dist/title-case.js",
   "module": "dist/title-case.module.js",
   "repository": {
@@ -26,13 +21,14 @@
     "build:main": "BABEL_ENV=main babel -d dist/ src/",
     "build:module": "BABEL_ENV=module babel -d dist/module/ src/",
     "clean": "rimraf .nyc_output coverage npm-debug.log dist/*",
-    "lint": "run-p lint:*",
-    "lint:js": "eslint --ignore-path .gitignore --fix  .",
-    "lint:package.json": "sort-package-json",
+    "precommit": "run-s lint-staged pretty-quick",
+    "lint": "eslint --fix .",
+    "lint-staged": "lint-staged",
     "semantic-release": "semantic-release",
     "pretest": "run-s lint",
     "test": "BABEL_ENV=main nyc mocha",
-    "posttest": "BABEL_ENV=main nyc report --reporter=lcov"
+    "posttest": "BABEL_ENV=main nyc report --reporter=lcov",
+    "pretty-quick": "pretty-quick --staged"
   },
   "config": {
     "commitizen": {
@@ -48,9 +44,7 @@
             {
               "targets": {
                 "node": "current",
-                "browsers": [
-                  "last 2 versions"
-                ]
+                "browsers": ["last 2 versions"]
               },
               "modules": false
             }
@@ -64,9 +58,7 @@
             {
               "targets": {
                 "node": "current",
-                "browsers": [
-                  "last 2 versions"
-                ]
+                "browsers": ["last 2 versions"]
               },
               "modules": "commonjs"
             }
@@ -89,21 +81,21 @@
     "eslint": "4.18.1",
     "eslint-config-airbnb-base": "12.1.0",
     "eslint-plugin-import": "2.9.0",
+    "husky": "0.14.3",
+    "lint-staged": "7.0.0",
     "mocha": "5.0.1",
     "mocha-cases": "0.2.1",
     "npm-run-all": "4.1.2",
     "nyc": "11.4.1",
+    "prettier": "1.10.2",
+    "pretty-quick": "1.4.1",
     "rimraf": "2.6.2",
     "semantic-release": "13.0.1",
     "sort-package-json": "1.11.0"
   },
   "nyc": {
-    "include": [
-      "src/"
-    ],
-    "require": [
-      "babel-register"
-    ],
+    "include": ["src/"],
+    "require": ["babel-register"],
     "all": true
   },
   "release": {
@@ -123,11 +115,7 @@
       },
       {
         "path": "@semantic-release/git",
-        "assets": [
-          "package.json",
-          "npm-shrinkwrap.json",
-          "CHANGELOG.md"
-        ]
+        "assets": ["package.json", "npm-shrinkwrap.json", "CHANGELOG.md"]
       },
       {
         "path": "@semantic-release/github",
