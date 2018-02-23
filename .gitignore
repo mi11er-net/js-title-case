@@ -1,5 +1,10 @@
-/.nyc_output/
-/coverage/
+# Dependency directories
 /node_modules/
+
+# Logs
 /npm-debug.log
 /yarn-error.log
+
+# Test output
+/.nyc_output/
+/coverage/
