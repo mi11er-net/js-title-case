@@ -71,9 +71,9 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
-"@mi11er/eslint-config@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@mi11er/eslint-config/-/eslint-config-2.0.0.tgz#389ab4a013c3a4781c1b23fbee9faa5dbc291074"
+"@mi11er/eslint-config@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@mi11er/eslint-config/-/eslint-config-2.1.0.tgz#8e7196a91e1e9a18271d63c099f2e806118864d3"
   dependencies:
     eslint-config-airbnb "16.1.0"
     eslint-config-airbnb-base "12.1.0"
