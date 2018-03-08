@@ -97,7 +97,7 @@
     "prettier": "1.11.1",
     "pretty-quick": "1.4.1",
     "rimraf": "2.6.2",
-    "semantic-release": "13.0.1",
+    "semantic-release": "15.0.0",
     "sort-package-json": "1.11.0"
   },
   "nyc": {
