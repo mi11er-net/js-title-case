@@ -71,9 +71,8 @@
   "dependencies": {},
   "devDependencies": {
     "@mi11er/eslint-config": "2.2.0",
-    "@semantic-release/changelog": "^1.0.0",
-    "@semantic-release/exec": "^2.0.0",
-    "@semantic-release/git": "^3.0.0",
+    "@semantic-release/changelog": "2.0.1",
+    "@semantic-release/git": "4.0.1",
     "babel-cli": "6.26.0",
     "babel-eslint": "8.2.2",
     "babel-plugin-syntax-dynamic-import": "6.18.0",
@@ -97,7 +96,7 @@
     "prettier": "1.11.1",
     "pretty-quick": "1.4.1",
     "rimraf": "2.6.2",
-    "semantic-release": "13.0.1",
+    "semantic-release": "15.1.5",
     "sort-package-json": "1.11.0"
   },
   "nyc": {
@@ -113,23 +112,25 @@
       "@semantic-release/git",
       "@semantic-release/github"
     ],
-    "publish": [
+    "prepare": [
       "@semantic-release/changelog",
-      "@semantic-release/npm",
       {
-        "path": "@semantic-release/exec",
-        "cmd": "yarn pack"
+        "path": "@semantic-release/npm",
+        "tarballDir": "release"
       },
       {
         "path": "@semantic-release/git",
-        "assets": ["package.json", "npm-shrinkwrap.json", "CHANGELOG.md"]
-      },
+        "assets": ["**"]
+      }
+    ],
+    "publish": [
+      "@semantic-release/npm",
       {
         "path": "@semantic-release/github",
         "assets": [
           {
-            "path": "js-title-case-v*.tgz",
-            "label": "npm package"
+            "path": "release/*.tgz",
+            "label": "Package tarball"
           }
         ]
       }
