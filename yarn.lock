@@ -93,7 +93,7 @@
     proxy-from-env "^1.0.0"
     url-template "^2.0.8"
 
-"@semantic-release/changelog@^1.0.0":
+"@semantic-release/changelog@1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@semantic-release/changelog/-/changelog-1.0.0.tgz#df918410ec04c72fed8328b8f583f4a2667b7584"
   dependencies:
@@ -115,7 +115,7 @@
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/@semantic-release/error/-/error-2.1.0.tgz#44771f676f5b148da309111285a97901aa95a6e0"
 
-"@semantic-release/exec@^2.0.0":
+"@semantic-release/exec@2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@semantic-release/exec/-/exec-2.0.0.tgz#09e4ec2d1ceb527f143fa39288d81b61f8478568"
   dependencies:
@@ -124,7 +124,7 @@
     execa "^0.9.0"
     lodash "^4.17.4"
 
-"@semantic-release/git@^3.0.0":
+"@semantic-release/git@3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@semantic-release/git/-/git-3.0.0.tgz#8e2fb02672e83c878376717d3185e1365d204599"
   dependencies:
