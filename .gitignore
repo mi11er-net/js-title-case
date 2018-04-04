@@ -5,6 +5,12 @@
 /npm-debug.log
 /yarn-error.log
 
+# Node
+/.npmrc
+
+# Release Dir
+/release/
+
 # Test output
 /.nyc_output/
 /coverage/
