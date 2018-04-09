@@ -10,25 +10,19 @@
   "license": "MIT",
   "author": "Matthew Miller <matthew@mi11er.net>",
   "files": ["dist/*", "LICENSE", "package.json", "README.md"],
-  "main": "dist/title-case.js",
-  "module": "dist/title-case.module.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mi11er-net/js-title-case.git"
-  },
+  "main": "index.js",
+  "module": "lib/title-case.mjs",
+  "repository": "https://github.com/mi11er-net/js-title-case.git",
   "scripts": {
-    "build": "run-s clean test build:*",
-    "build:main": "BABEL_ENV=main babel -d dist/ src/",
-    "build:module": "BABEL_ENV=module babel -d dist/module/ src/",
-    "clean": "rimraf .nyc_output coverage npm-debug.log dist/*",
+    "clean": "rimraf .nyc_output coverage npm-debug.log",
     "precommit": "run-s lint-staged pretty-quick nsp",
     "lint": "eslint --fix .",
     "lint-staged": "lint-staged",
     "nsp": "nsp check",
     "semantic-release": "semantic-release",
     "pretest": "run-s lint",
-    "test": "BABEL_ENV=main nyc mocha",
-    "posttest": "BABEL_ENV=main nyc report --reporter=lcov",
+    "test": "nyc mocha --require esm",
+    "posttest": "nyc report --reporter=lcov",
     "pretty-quick": "pretty-quick --staged"
   },
   "config": {
@@ -36,48 +30,13 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "babel": {
-    "env": {
-      "module": {
-        "presets": [
-          [
-            "env",
-            {
-              "targets": {
-                "node": "current",
-                "browsers": ["last 2 versions"]
-              },
-              "modules": false
-            }
-          ]
-        ]
-      },
-      "main": {
-        "presets": [
-          [
-            "env",
-            {
-              "targets": {
-                "node": "current",
-                "browsers": ["last 2 versions"]
-              },
-              "modules": "commonjs"
-            }
-          ]
-        ]
-      }
-    }
+  "dependencies": {
+    "esm": "3.0.16"
   },
-  "dependencies": {},
   "devDependencies": {
     "@mi11er/eslint-config": "2.2.2",
     "@semantic-release/changelog": "2.0.1",
     "@semantic-release/git": "4.0.1",
-    "babel-cli": "6.26.0",
-    "babel-eslint": "8.2.2",
-    "babel-plugin-syntax-dynamic-import": "6.18.0",
-    "babel-preset-env": "1.6.1",
-    "babel-register": "6.26.0",
     "commitizen": "2.9.6",
     "cz-conventional-changelog": "2.1.0",
     "eslint": "4.19.1",
@@ -100,9 +59,9 @@
     "sort-package-json": "1.11.0"
   },
   "nyc": {
-    "include": ["src/"],
-    "require": ["babel-register"],
-    "all": true
+    "include": ["lib/", "index.js", "index.mjs"],
+    "require": ["esm"],
+    "extension": [".jsx", ".mjs"]
   },
   "release": {
     "branch": "master",
