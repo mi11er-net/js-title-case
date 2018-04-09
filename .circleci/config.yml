@@ -19,7 +19,7 @@ jobs:
           key: v1-dependencies-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:
             - node_modules
-      - run: yarn build
+      - run: yarn test
       - persist_to_workspace:
           root: ~/project
           paths:
