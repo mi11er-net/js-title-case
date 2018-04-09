@@ -1,6 +1,6 @@
 {
   "name": "js-title-case",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "private": false,
   "description": "Convert a string to title case, while handling edge cases",
   "homepage": "https://github.com/mi11er-net/js-title-case",
@@ -9,7 +9,12 @@
   },
   "license": "MIT",
   "author": "Matthew Miller <matthew@mi11er.net>",
-  "files": ["dist/*", "LICENSE", "package.json", "README.md"],
+  "files": [
+    "dist/*",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
   "main": "index.js",
   "module": "lib/title-case.mjs",
   "repository": "https://github.com/mi11er-net/js-title-case.git",
@@ -59,9 +64,18 @@
     "sort-package-json": "1.11.0"
   },
   "nyc": {
-    "include": ["lib/", "index.js", "index.mjs"],
-    "require": ["esm"],
-    "extension": [".jsx", ".mjs"]
+    "include": [
+      "lib/",
+      "index.js",
+      "index.mjs"
+    ],
+    "require": [
+      "esm"
+    ],
+    "extension": [
+      ".jsx",
+      ".mjs"
+    ]
   },
   "release": {
     "branch": "master",
@@ -79,7 +93,9 @@
       },
       {
         "path": "@semantic-release/git",
-        "assets": ["**"]
+        "assets": [
+          "**"
+        ]
       }
     ],
     "publish": [

@@ -1,3 +1,11 @@
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/mi11er-net/js-title-case/compare/v1.0.7...v1.1.0) (2018-04-09)
+
+
+### Features
+
+* **esm:** convert to use ESM instead of babel ([6b77ce7](https://github.com/mi11er-net/js-title-case/commit/6b77ce7))
+
 <a name="1.0.7"></a>
 ## [1.0.7](https://github.com/MatthewMi11er/js-title-case/compare/9d98d2195f1ac5963a68d61cef60df5068194b2e...v1.0.7) (2018-01-18)
 
