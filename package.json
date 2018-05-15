@@ -61,7 +61,7 @@
     "pretty-quick": "1.4.1",
     "rimraf": "2.6.2",
     "semantic-release": "15.1.7",
-    "sort-package-json": "1.12.0"
+    "sort-package-json": "1.15.0"
   },
   "nyc": {
     "include": [

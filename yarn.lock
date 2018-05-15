@@ -1225,6 +1225,10 @@ detect-indent@4.0.0, detect-indent@^4.0.0:
   dependencies:
     repeating "^2.0.0"
 
+detect-indent@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/detect-indent/-/detect-indent-5.0.0.tgz#3871cc0a6a002e8c3e5b3cf7f336264675f06b9d"
+
 diff@3.5.0, diff@^3.2.0:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/diff/-/diff-3.5.0.tgz#800c0dd1e0a8bfbc95835c202ad220fe317e5a12"
@@ -4542,10 +4546,11 @@ sort-object-keys@^1.1.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/sort-object-keys/-/sort-object-keys-1.1.2.tgz#d3a6c48dc2ac97e6bc94367696e03f6d09d37952"
 
-sort-package-json@1.12.0:
-  version "1.12.0"
-  resolved "https://registry.yarnpkg.com/sort-package-json/-/sort-package-json-1.12.0.tgz#cb5c8b583270e23624f1780cf4ba025299403a96"
+sort-package-json@1.15.0:
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/sort-package-json/-/sort-package-json-1.15.0.tgz#3c732cc8312eb4aa12f6eccab1bc3dea89b11dff"
   dependencies:
+    detect-indent "^5.0.0"
     sort-object-keys "^1.1.1"
 
 source-map-resolve@^0.5.0:
