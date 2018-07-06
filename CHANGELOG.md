@@ -1,3 +1,11 @@
+<a name="1.1.7"></a>
+## [1.1.7](https://github.com/mi11er-net/js-title-case/compare/v1.1.6...v1.1.7) (2018-07-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency esm to v3.0.62 ([32bfc14](https://github.com/mi11er-net/js-title-case/commit/32bfc14))
+
 <a name="1.1.6"></a>
 ## [1.1.6](https://github.com/mi11er-net/js-title-case/compare/v1.1.5...v1.1.6) (2018-06-02)
 
