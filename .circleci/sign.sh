@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-/usr/bin/gpg --passphrase "${GPG_PASSPHRASE}" --batch --no-tty $@
+/usr/bin/gpg --passphrase "${GPG_PASSPHRASE}" --batch --no-tty --pinentry-mode loopback $@
