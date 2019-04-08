@@ -18,8 +18,8 @@ jobs:
           name: update-npm
           command: 'sudo npm install -g npm@latest'
       - run:
-        name: install-npm-dependencies
-        command: 'npm ci'
+          name: install-npm-dependencies
+          command: 'npm ci'
       - save_cache:
           key: v1-dependencies-{{ .Branch }}-{{ checksum "package-lock.json" }}
           paths:
