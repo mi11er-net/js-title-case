@@ -41,8 +41,9 @@
   "devDependencies": {
     "@capaj/npm-audit-ci": "1.0.5",
     "@mi11er/eslint-config": "2.4.1",
-    "@semantic-release/changelog": "2.1.2",
-    "@semantic-release/git": "5.0.0",
+    "@semantic-release/changelog": "3.0.2",
+    "@semantic-release/exec": "3.3.2",
+    "@semantic-release/git": "7.0.8",
     "commitizen": "3.0.7",
     "cz-conventional-changelog": "2.1.0",
     "eslint": "5.16.0",
@@ -93,9 +94,19 @@
         "tarballDir": "release"
       },
       {
+        "path": "@semantic-release/exec",
+        "cmd": "npx sort-package-json"
+      },
+      {
+        "path": "@semantic-release/exec",
+        "cmd": "npx pretty-quick"
+      },
+      {
         "path": "@semantic-release/git",
         "assets": [
-          "**"
+          "package.json",
+          "package-lock.json",
+          "CHANGELOG.md"
         ]
       }
     ],
