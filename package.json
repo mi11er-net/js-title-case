@@ -21,14 +21,14 @@
   "scripts": {
     "audit": "npm-audit-ci -m",
     "clean": "rimraf .nyc_output coverage npm-debug.log",
-    "precommit": "run-s lint-staged pretty-quick audit",
     "lint": "eslint --fix .",
     "lint-staged": "lint-staged",
+    "precommit": "run-s lint-staged pretty-quick audit",
+    "pretty-quick": "pretty-quick --staged",
     "semantic-release": "semantic-release",
     "pretest": "run-s lint",
     "test": "nyc mocha --require esm",
-    "posttest": "nyc report --reporter=lcov",
-    "pretty-quick": "pretty-quick --staged"
+    "posttest": "nyc report --reporter=lcov"
   },
   "config": {
     "commitizen": {
@@ -40,14 +40,15 @@
   },
   "devDependencies": {
     "@capaj/npm-audit-ci": "1.0.5",
-    "@mi11er/eslint-config": "2.2.2",
+    "@mi11er/eslint-config": "2.4.1",
     "@semantic-release/changelog": "2.1.2",
     "@semantic-release/git": "5.0.0",
     "commitizen": "3.0.7",
     "cz-conventional-changelog": "2.1.0",
-    "eslint": "5.0.1",
-    "eslint-plugin-import": "2.13.0",
+    "eslint": "5.16.0",
+    "eslint-plugin-import": "2.16.0",
     "eslint-plugin-no-unsafe-innerhtml": "1.0.16",
+    "eslint-plugin-node": "8.0.1",
     "eslint-plugin-optimize-regex": "1.1.6",
     "eslint-plugin-scanjs-rules": "0.2.1",
     "eslint-plugin-security": "1.4.0",
