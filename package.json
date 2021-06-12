@@ -43,7 +43,7 @@
     "@mi11er/eslint-config": "2.4.1",
     "@semantic-release/changelog": "3.0.2",
     "@semantic-release/exec": "3.3.2",
-    "@semantic-release/git": "7.0.8",
+    "@semantic-release/git": "7.0.16",
     "commitizen": "3.1.1",
     "cz-conventional-changelog": "2.1.0",
     "eslint": "5.16.0",
